@@ -3,6 +3,11 @@ Tool to get OpenWRT installed on an OM5P-AC Router after unlocking it using a ra
 
 This is provided with no guarantees and there is a chance you're going to break your router/AP while using this. If that doesn't scare you away then keep reading.
 
+FRC:
+  * You might be here because you are an FRC Team or someone from a team.
+  * You probably don't need to use this.
+  * If you don't need to use this then don't.
+
 Parts Needed:
   * Raspberry Pi 4
   * Ethernet Cable
