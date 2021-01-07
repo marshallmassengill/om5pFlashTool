@@ -9,9 +9,24 @@ Parts Needed:
   * Power cable for an OM5P-AC Radio (12v Barrel Jack)
   * OM5P-AC Radio
 
-Directions:
+General Directions:
   * Follow the prompts.  Do not skip any of them.
-  * Yes, you really should wait the full 6 minutes that it takes.  Go make some coffee or something.
+  * Yes, you really should wait the full 6 minutes that it takes for the unlock.  Just be patient.
+
+Specific Directions:
+  * Run the flashTool.sh script
+  * Accept the risks if you do
+  * You will be prompted to plug in the ethernet cable into the 18-24V POE Port
+  * You will then be prompted to plug in the power cable
+  * The process of unlocking the device will start
+  * You need to wait for about six minutes
+  * You will be prompted to unplug the power cable to reboot the router
+  * You will need to wait while the OpenWRT firmware is loaded
+  * You will be prompted to disconnect both the ethernet and power cables
+  * You will need to plug the ethernet cable back into the 802.3af POE Port
+  * You will need to plug in the power
+  * A browser should open to http://192.168.1.1
+  * Configure the radio however you'd like using OpenWRT
 
 Thanks:
   * Big thanks to the OpenWRT group for making awesome software.
