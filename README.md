@@ -40,8 +40,9 @@ Specific Directions:
   * You will be prompted to plug in the ethernet cable into the 18-24V POE Port
   * You will then be prompted to plug in the power cable
   * The process of unlocking the device will start
-  * You need to wait for about six minutes
+  * You need to wait for about nine minutes
   * You will be prompted to unplug the power cable to reboot the router
+  * You will be prompted to plug the power back in.
   * You will need to wait while the OpenWRT firmware is loaded
   * You will be prompted to disconnect both the ethernet and power cables
   * You will need to plug the ethernet cable back into the 802.3af POE Port
