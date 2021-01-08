@@ -43,7 +43,7 @@ function setupTFTPD () {
 
 function unlockOm5pAc () {
 	echo "Unlocking OM5P-AC..."
-	zenity --width=400 --warning --text "Please plug an ethernet cable from the Raspberry Pi into the '8-24V POE' Port on the OM5P-AC, then proceed. 
+	zenity --width=400 --warning --text "Please plug an ethernet cable from the Raspberry Pi into the '18-24V POE' Port on the OM5P-AC, then proceed. 
 	
 DO NOT plugin the power cable yet.  We will do that in the next step."
 	zenity --width=400 --warning --text "Please plug the power cable into the OM5P-AC, then promptly click OK to proceed."
@@ -51,22 +51,29 @@ DO NOT plugin the power cable yet.  We will do that in the next step."
 	sleep 30s
 	if tail -n 50 /var/log/syslog | grep "RRQ from 192.168.100.9 filename fwupgrade.cfg"
 	then
-		echo "Flashing unlock, this process takes about six minutes."
-		sleep 6m
+		echo "Flashing unlock, this process takes about nine minutes."
+		sleep 9m
 		##CHECK FOR BACKUP FILE HERE
+		if test -f "/srv/tftp/*_backup.bin"; then
+			echo "Flash backup exists in the /srv/tftp directory."
+		fi
 	else 
 		echo "Failed to flash unlock."
 		exit
 	fi
 }
 
+function postUnlock () {
+	zenity --width=400 --warning --text "STOP!!! Please UNPLUG the power cable from the OM5P-AC, then proceed."
+}
+
 function stopTFTPD () {
+	zenity --width=400 --warning --text "We are done unlocking your OM5P-AC. The next steps will flash the OpenWRT Image"
 	echo "Stopping TFTPD Service."
 	sudo systemctl stop tftpd-hpa
 }
 
 function flashOpenWRT () {
-	zenity --width=400 --warning --text "STOP!!! Please UNPLUG the power cable from the OM5P-AC, then proceed."
 	zenity --width=400 --info --text "Please PLUG the power cable back into the OM5P-AC, then proceed."
 	exec 3< <(sudo ap51-flash eth0 ./openwrt-19.07.5-ar71xx-generic-om5pac-squashfs-factory.bin 2>&1)
 	while read line; do
@@ -104,11 +111,14 @@ function connectToLuci () {
 }
 
 function main () {
+	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+	cd $DIR
 	clear
 	askForConsent
 	setupStaticAddress
 	setupTFTPD
 	unlockOm5pAc
+	postUnlock
 	stopTFTPD
 	flashOpenWRT
 	setupDHCP
