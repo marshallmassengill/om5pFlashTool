@@ -52,6 +52,7 @@ Specific Directions:
 Image File:
   * There is a Raspberry pi image file.  It should work on a Pi 3 or a Pi 4.
   * Link is here: https://drive.google.com/file/d/1HsNgSEx2KmgwyxEb49PKPvfaoFYVwldJ/view?usp=sharing
+  * It might not correctly launch the browser after running the script from the desktop.  Open the browser and navigate to http://192.168.1.1
 
 Thanks:
   * Big thanks to the OpenWRT group for making awesome software.
