@@ -57,7 +57,7 @@ Image File:
 
 Thanks:
   * Big thanks to the OpenWRT group for making awesome software.
-  * HUGE thanks to True Systems for their OM5P Unlocker Utility
+  * HUGE thanks to True Systems for their OM5P-AC Unlocker Utility
   
 Resources:
   * https://openwrt.org/toh/hwdata/open-mesh/open-mesh_om5p-ac
