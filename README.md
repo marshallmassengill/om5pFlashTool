@@ -35,7 +35,7 @@ General Directions:
   * Have fun.
 
 Specific Directions:
-  * Run the flashTool.sh script
+  * Run the flashTool.sh script (it's on the desktop in the image file for you to double click on)
   * Accept the risks if you do
   * You will be prompted to plug in the ethernet cable into the 18-24V POE Port
   * You will then be prompted to plug in the power cable
@@ -48,6 +48,10 @@ Specific Directions:
   * You will need to plug in the power
   * A browser should open to http://192.168.1.1
   * Configure the radio however you'd like using OpenWRT
+  
+Image File:
+  * There is a Raspberry pi image file.  It should work on a Pi 3 or a Pi 4.
+  * Link is here: https://drive.google.com/file/d/1HsNgSEx2KmgwyxEb49PKPvfaoFYVwldJ/view?usp=sharing
 
 Thanks:
   * Big thanks to the OpenWRT group for making awesome software.
