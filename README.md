@@ -9,7 +9,7 @@ FRC:
   * If you don't need to use this then don't.
 
 Parts Needed:
-  * Raspberry Pi 4
+  * Raspberry Pi 4 or pi 3
   * Ethernet Cable
   * Power cable for an OM5P-AC Radio (12v Barrel Jack)
   * OM5P-AC Radio
